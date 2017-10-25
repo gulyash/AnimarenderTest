@@ -1,0 +1,12 @@
+version: '3'
+services:
+  main:
+    build: .
+    image: animarender-test
+    ports:
+      - '8888:8888'
+      - '2201:22'
+    volumes:
+      - './animarender-test:/root/animarender-test/animarender-test'
+    stdin_open: true
+    tty: true
