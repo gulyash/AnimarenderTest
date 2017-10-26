@@ -15,7 +15,7 @@ LOGGER = logging.getLogger(__name__)
 class Application(tornado.web.Application):
     """
     Main application class. It is responsible for connecting to RabbitMQ server
-    and for performing RPC requests to the Deadline service.
+    and for performing RPC requests to services.
     Provides main application entry point (see: ``launch``).
     """
 

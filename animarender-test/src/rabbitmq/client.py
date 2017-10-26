@@ -17,8 +17,8 @@ class RabbitMQClient:
     to ``SERVER_QUEUE`` message queue.
     """
 
-    CLIENT_QUEUE = 'deadline_client'  # From the core to the Deadline service.
-    SERVER_QUEUE = 'deadline_server'  # From the Deadline service to the core.
+    CLIENT_QUEUE = 'client_queue'  # From the core to the service.
+    SERVER_QUEUE = 'server_queue'  # From the service to the core.
 
     def __init__(self, host='localhost', port=5672, username='guest', password='guest'):
         """
