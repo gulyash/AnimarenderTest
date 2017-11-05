@@ -20,11 +20,10 @@ class DatabaseClient:
     def load_models():
         """
         Loads application models.
-
         Every model class should be imported here to be available for
         SQLAlchemy Declarative Mapper and Alembic automatic revisions.
-
         Note: this import may look like unused, but it is intentional.
         DO NOT delete this import or this entire method.
         """
         from models.jobs import Jobs
+        from models.profits import Profits
