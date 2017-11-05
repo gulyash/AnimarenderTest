@@ -7,6 +7,7 @@ import tornado.web
 import config
 from database import DatabaseClient
 from handlers import JobsHandler
+from handlers import ProfitsHandler
 from rabbitmq import RabbitMQClient
 
 LOGGER = logging.getLogger(__name__)
@@ -30,6 +31,7 @@ class Application(tornado.web.Application):
 
         handlers = [
             (r'/api/v1/jobs', JobsHandler),
+            (r'/api/v1/profits', ProfitsHandler),
         ]
 
         super().__init__(handlers, debug=True)
