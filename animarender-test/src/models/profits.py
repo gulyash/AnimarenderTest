@@ -1,8 +1,7 @@
 import json
 
-from sqlalchemy import BigInteger
+from sqlalchemy import BigInteger, Float
 from sqlalchemy import Column
-from sqlalchemy import Integer
 
 from database.meta import DeclarativeBase
 
@@ -12,7 +11,7 @@ class Profits(DeclarativeBase):
     __table_args__ = {'mysql_collate': 'utf8_general_ci'}
 
     id = Column(BigInteger, primary_key=True)
-    profit = Column(Integer)
+    profit = Column(Float)
 
     @property
     def dict(self):

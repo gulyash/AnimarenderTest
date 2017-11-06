@@ -41,4 +41,4 @@ class ProfitsHandler(tornado.web.RequestHandler):
             jobs = await run_async(session.query(Jobs).all)
             jobs = [job.dict for job in jobs]
             profits = await self.rabbitmq_client.call('count_profits', jobs)
-            result = session.execute(Profits.insert(), profits)
+            session.bulk_insert_mappings(Profits, profits)
